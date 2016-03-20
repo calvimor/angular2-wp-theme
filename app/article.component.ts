@@ -7,10 +7,9 @@ import {RouteParams, Router} from 'angular2/router';
 		template: `
 		<div *ngIf="article">
 			<h1>{{ article.title.rendered }}</h1>
-			<strong>this is a single post</strong><br />
+			<img src="{{article._embedded['https://api.w.org/featuredmedia'][0].media_details.sizes.medium_large.source_url}}" />
 			<div [innerHTML]="article.content.rendered"> </div>
 		</div>
-		<br /><br />
 	`,
 		providers: [ArticlesService]
 })

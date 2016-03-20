@@ -21,20 +21,16 @@ System.register(['angular2/core', 'angular2/http'], function(exports_1, context_
                 http_1 = http_1_1;
             }],
         execute: function() {
-            //import {Observable} from 'rxjs/Observable';
-            /*export class Article {
-                    constructor(public id: number, link: string, title: string) { }
-            }*/
             ArticlesService = (function () {
                 function ArticlesService(http) {
                     this.http = http;
-                    this._wpBase = 'http://ng2-wp.liquifiedmedia.com/wp-json/wp/v2/';
+                    this._wpBase = 'http://<path-to-your-wordpress-site>/wp-json/wp/v2/';
                 }
                 ArticlesService.prototype.getArticles = function () {
                     return this.http.get(this._wpBase + 'posts/?page=1');
                 };
                 ArticlesService.prototype.getArticle = function (slug) {
-                    return this.http.get(this._wpBase + 'posts?filter[name]=' + slug);
+                    return this.http.get(this._wpBase + 'posts?filter[name]=' + slug + '&_embed');
                 };
                 ArticlesService = __decorate([
                     core_1.Injectable(), 

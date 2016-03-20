@@ -31,4 +31,7 @@ function my_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts');
 
+//featured images
+add_theme_support( 'post-thumbnails' ); 
+
 ?>

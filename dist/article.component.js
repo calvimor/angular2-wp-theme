@@ -46,7 +46,7 @@ System.register(['angular2/core', './articles.service', 'angular2/router'], func
                 ArticleComponent = __decorate([
                     core_1.Component({
                         selector: 'router-outlet',
-                        template: "\n\t\t<div *ngIf=\"article\">\n\t\t\t<h1>{{ article.title.rendered }}</h1>\n\t\t\t<strong>this is a single post</strong><br />\n\t\t\t<div [innerHTML]=\"article.content.rendered\"> </div>\n\t\t</div>\n\t\t<br /><br />\n\t",
+                        template: "\n\t\t<div *ngIf=\"article\">\n\t\t\t<h1>{{ article.title.rendered }}</h1>\n\t\t\t<img src=\"{{article._embedded['https://api.w.org/featuredmedia'][0].media_details.sizes.medium_large.source_url}}\" />\n\t\t\t<div [innerHTML]=\"article.content.rendered\"> </div>\n\t\t</div>\n\t",
                         providers: [articles_service_1.ArticlesService]
                     }), 
                     __metadata('design:paramtypes', [router_1.Router, router_1.RouteParams, articles_service_1.ArticlesService])
